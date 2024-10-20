@@ -6,7 +6,7 @@ public class AddForceScript : MonoBehaviour
 {
 
     public Rigidbody rb; // to make it publicly accessible
-    public float force = 10f;
+    public float force = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,5 +21,11 @@ public class AddForceScript : MonoBehaviour
     void Update()
     {
         rb.AddForce(new Vector3(1, 0, 0) * force);
+        /* if a key is used to add force
+        if (Input.GetKey(KeyCode.F))
+        {
+            rb.AddForce(new Vector3(1, 0, 0) * force);
+        }
+        */
     }
 }
